@@ -12,5 +12,14 @@
     <p id="time"></p>
     <button hx-get="/swap" hx-target="#time" hx-swap="outerHTML">Update</button>
 </div>
+<div>
+    <p hx-get="/data1" hx-trigger="load" hx-swap="outerHTML"></p>
+</div>
+<div>
+    <p hx-get="/data2" hx-trigger="load" hx-swap="outerHTML"></p>
+</div>
+<div>
+    <p hx-get="/data3" hx-trigger="load" hx-swap="outerHTML"></p>
+</div>
 </body>
 </html>

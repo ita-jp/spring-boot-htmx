@@ -21,4 +21,25 @@ public class IndexController {
     public String swap() {
         return "<p id=\"time\">" + LocalDateTime.now() + "</p>";
     }
+
+    @GetMapping(value = "data1", headers = "HX-Request")
+    @ResponseBody
+    public String data1() throws InterruptedException {
+        Thread.sleep(1000);
+        return "<p>data1</p>";
+    }
+
+    @GetMapping(value = "data2", headers = "HX-Request")
+    @ResponseBody
+    public String data2() throws InterruptedException {
+        Thread.sleep(2000);
+        return "<p>data2</p>";
+    }
+
+    @GetMapping(value = "data3", headers = "HX-Request")
+    @ResponseBody
+    public String data3() throws InterruptedException {
+        Thread.sleep(3000);
+        return "<p>data3</p>";
+    }
 }
